@@ -10,6 +10,9 @@ class window.AppView extends Backbone.View
     'click .stand-button': -> 
       @model.get('playerHand').stand() #halt the play of the player
       @model.get('dealerHand').dealerPlay() #just need to get rid of covered card
+      finalPlayerScore = @model.get('playerHand').scores()
+      finalDealerScore = @model.get('dealerHand').scores()
+      if finalPlayerScore[0]>finalDealerScore[0] then alert 'player wins!' else alert 'dealer wins!'
 
   initialize: ->
     @render()
