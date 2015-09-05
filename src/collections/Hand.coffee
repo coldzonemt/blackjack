@@ -10,9 +10,7 @@ class window.Hand extends Backbone.Collection
 
   stand: -> 
     #We want to make it the dealer's turn. We cannot hit() anymore, too. 
-    #console.log @scores()
-    playerScore = @scores()
-    playerScore
+    
 
   hasAce: -> @reduce (memo, card) ->
     memo or card.get('value') is 1

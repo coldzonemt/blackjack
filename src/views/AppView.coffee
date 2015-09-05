@@ -12,7 +12,15 @@ class window.AppView extends Backbone.View
       @model.get('dealerHand').dealerPlay() #just need to get rid of covered card
       finalPlayerScore = @model.get('playerHand').scores()
       finalDealerScore = @model.get('dealerHand').scores()
+      if finalPlayerScore[0]>21 
+        alert 'dealer wins'
+        return 
+      if finalDealerScore[0]>21 
+        alert 'player wins'
+        return
       if finalPlayerScore[0]>finalDealerScore[0] then alert 'player wins!' else alert 'dealer wins!'
+        
+
 
   initialize: ->
     @render()
