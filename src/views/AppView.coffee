@@ -8,9 +8,11 @@ class window.AppView extends Backbone.View
   events:
     'click .hit-button': -> @model.get('playerHand').hit()
     'click .stand-button': -> 
-      @model.get('playerHand').stand() #halt the play of the player, trigger dealerPlay(); 
-      @model.get('dealerHand').dealerPlay() #just need to get rid of covered card
-      @model.findWinner()
+      @model.get('dealerHand').stand()  
+      
+      setTimeout =>
+        @model.findWinner()
+      ,1000
       @render()
 
   initialize: ->

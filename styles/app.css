@@ -9,20 +9,21 @@
 
 .covered {
   visibility: hidden; 
-}
 
-.covered-card {
-  background-image: url('../img/card-back.png');
-  /*background-color: black;*/
 }
 
 .hand {
   overflow: auto;
 }
-div>span {
+
+div>span { /* look for a span that is a child of a div */
   visibility: hidden;
 }
 
 body {
   background-color: #277714;
+}
+
+.covered-card {
+  background-image: url('../img/card-back.png');
 }
