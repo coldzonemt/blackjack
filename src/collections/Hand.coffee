@@ -11,6 +11,8 @@ class window.Hand extends Backbone.Collection
   stand: -> 
     #We want to make it the dealer's turn. We cannot hit() anymore, too. 
     
+    #call dealerPlay
+    # @dealerPlay(); 
 
   hasAce: -> @reduce (memo, card) ->
     memo or card.get('value') is 1
@@ -30,7 +32,5 @@ class window.Hand extends Backbone.Collection
     #WE SWITCH / SET THE HANDS IN THE APPVIEW!!! REMEMBER THIS, KRISTIN!! And Corey, even though you were the one who did :D 
     @models[0].flip()
     if @scores()[0] < 17 or @scores()[1] < 17 then @hit()
-    dealerScore = @scores()
-    #if dealerScore[0]  
-
-    #console.log @stand()
+    
+    #after the dealer plays, we need to find the winner.
