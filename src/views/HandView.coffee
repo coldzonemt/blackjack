@@ -7,10 +7,13 @@ class window.HandView extends Backbone.View
     @collection.on 'add remove change', => @render()
     @render()
 
+
+
   render: ->
     @$el.children().detach()
     @$el.html @template @collection
     @$el.append @collection.map (card) ->
       new CardView(model: card).$el
+      # Change score display, based on best results with an Ace equaling 1 or 11
     @$('.score').text @collection.scores()[0]
 
