@@ -14,14 +14,13 @@ class window.App extends Backbone.Model
     if finalPlayerScore[0]>21 
       dealerWin = true
       alert 'dealer wins'
+      return
     if finalDealerScore[0]>21 
-      alert 'player wins'
       playerWin = true
+      alert 'player wins'
+      return 
     if finalPlayerScore[0]>finalDealerScore[0] then alert 'player win' else alert 'dealer win!' 
-    `
-    return setTimeOut(function(){return dealerWin ? alert("dealer wins!") : alert("player wins!"); }, 1000);
-    `
-    #setTimeOut(function() { this.initialize}, 2000)
+
 
 
 
