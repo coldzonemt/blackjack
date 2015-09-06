@@ -12,7 +12,7 @@ class window.AppView extends Backbone.View
       
       setTimeout =>
         @model.findWinner()
-      ,500
+      ,100
       @render()
 
   initialize: ->

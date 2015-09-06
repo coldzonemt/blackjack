@@ -14,12 +14,13 @@ class window.App extends Backbone.Model
     if finalPlayerScore[0]>21 
       dealerWin = true
       alert 'dealer wins'
-      return
+      return 
     if finalDealerScore[0]>21 
       playerWin = true
       alert 'player wins'
       return 
     if finalPlayerScore[0]>finalDealerScore[0] then alert 'player win' else alert 'dealer win!' 
+    
 
 
 
